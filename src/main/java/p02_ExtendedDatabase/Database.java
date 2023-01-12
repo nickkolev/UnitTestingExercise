@@ -10,7 +10,6 @@ public class Database {
     private int elementsCount = 0;
     private int index;
 
-
     public Database(Person... people) throws OperationNotSupportedException {
         this.elementsCount = people.length;
         this.setElements(people);
@@ -21,12 +20,12 @@ public class Database {
         if (person == null) {
             throw new OperationNotSupportedException();
         }
-
         this.elements[++index] = person;
         this.elementsCount++;
     }
 
     public void remove() throws OperationNotSupportedException {
+
         try {
 			this.elements[index--] = null;
 			this.elementsCount--;			

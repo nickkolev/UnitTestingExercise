@@ -55,11 +55,9 @@ public class Database {
         }
 
         for (Person person : elements) {
-
             if (person == null) {
                 continue;
             }
-
             if (person.getUsername().equals(username)) {
                 people.add(person);
             }
@@ -68,7 +66,6 @@ public class Database {
         if (people.size() != 1) {
             throw new OperationNotSupportedException();
         }
-
         return people.get(0);
     }
 
@@ -109,3 +106,6 @@ public class Database {
         this.index = elements.length - 1;
     }
 }
+
+
+//comment here

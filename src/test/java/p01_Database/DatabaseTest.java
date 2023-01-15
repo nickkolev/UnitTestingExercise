@@ -45,5 +45,22 @@ public class DatabaseTest {
 
     //2. add
     //2.1 успешно добавяне на елемент
+    @Test
+    public void testSuccessfulAddElement() throws OperationNotSupportedException {
+        Integer[] elements = database.getElements();
+        database.add(50);
+        Assert.assertEquals("Invalid add operation", elements.length, NUMBERS.length + 1);
+        Assert.assertEquals("Invalid add operation", elements[elements.length - 1], Integer.valueOf(50));
+    }
+
     //2.2 добавяне на Null
+    @Test(expected = OperationNotSupportedException.class)
+    public void testAddMethodThrowWhenAddingNull() throws OperationNotSupportedException {
+        database.add(null);
+    }
+
+    //3. remove
+    //3.1 успешно премахване на елемент
+    //3.2 премахване на елемент от празна database
+
 }

@@ -8,7 +8,6 @@ public class Database {
     private int elementsCount = 0;
     private int index;
 
-
     public Database(Integer... elements) throws OperationNotSupportedException {
         this.elementsCount = elements.length;
         this.setElements(elements);
@@ -25,12 +24,12 @@ public class Database {
     }
 
     public void remove() throws OperationNotSupportedException {
-		try {
-			this.elements[index--] = null;
-			this.elementsCount--;			
-		} catch (ArrayIndexOutOfBoundsException ex) {
-			throw new OperationNotSupportedException();
-		}
+        try {
+            this.elements[index--] = null;
+            this.elementsCount--;
+        } catch (ArrayIndexOutOfBoundsException ex) {
+            throw new OperationNotSupportedException();
+        }
     }
 
     public Integer[] getElements() {

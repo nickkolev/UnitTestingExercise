@@ -9,6 +9,7 @@ import org.junit.Test;
 import java.util.Iterator;
 
 public class InstockTest {
+
     private final String DEFAULT_PRODUCT_LABEL = "label";
     private final int DEFAULT_PRODUCT_QUANTITY = 200;
     private final double DEFAULT_PRODUCT_PRICE = 2.5;
@@ -199,7 +200,9 @@ public class InstockTest {
         Iterator<Product> iterator = actual.iterator();
 
         Assert.assertTrue(actual.iterator().hasNext());
+
         int i = 0;
+
         while (iterator.hasNext()) {
             Assert.assertEquals(sorted[i++], iterator.next());
         }

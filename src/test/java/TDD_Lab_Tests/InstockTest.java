@@ -207,6 +207,11 @@ public class InstockTest {
             Assert.assertEquals(sorted[i++], iterator.next());
         }
     }
+    
+    
+    
+    
+    
 
     @Test
     public void findAllInPriceRangeShouldReturnEmptyIterableForEmptyStock() {

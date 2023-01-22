@@ -207,11 +207,7 @@ public class InstockTest {
             Assert.assertEquals(sorted[i++], iterator.next());
         }
     }
-    
-    
-    
-    
-    
+
 
     @Test
     public void findAllInPriceRangeShouldReturnEmptyIterableForEmptyStock() {
@@ -220,6 +216,7 @@ public class InstockTest {
 
         Assert.assertFalse(actual.iterator().hasNext());
     }
+
 
     @Test
     public void findAllInPriceRangeShouldReturnEmptyIterableIfNonMatchesThePrice() {

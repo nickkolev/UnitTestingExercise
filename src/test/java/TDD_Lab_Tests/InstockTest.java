@@ -208,7 +208,6 @@ public class InstockTest {
         }
     }
 
-
     @Test
     public void findAllInPriceRangeShouldReturnEmptyIterableForEmptyStock() {
 
@@ -216,7 +215,6 @@ public class InstockTest {
 
         Assert.assertFalse(actual.iterator().hasNext());
     }
-
 
     @Test
     public void findAllInPriceRangeShouldReturnEmptyIterableIfNonMatchesThePrice() {
@@ -233,7 +231,9 @@ public class InstockTest {
 
         this.stock.add(product);
 
+
         Iterable<Product> actual = this.stock.findAllInRange(-5, -15);
+
 
         Assert.assertFalse(actual.iterator().hasNext());
     }
